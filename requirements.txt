@@ -1,0 +1,8 @@
+# Target a modern Django that supports Python 3.13.x.
+# If you need a specific minor version, change the pin accordingly.
+Django>=5.0,<6.0
+
+# MySQL DB drivers: on many platforms `mysqlclient` is recommended.
+# On Windows you may prefer `PyMySQL` (pure-Python) if building `mysqlclient` is difficult.
+mysqlclient
+PyMySQL

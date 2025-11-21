@@ -1,0 +1,34 @@
+/* Interactive list styles: hover, focus, and pointer */
+ul.interactive {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.interactive li {
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.12s ease, transform 0.08s ease;
+}
+
+ul.interactive li:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+ul.interactive li:focus {
+  outline: 2px solid rgba(0,0,0,0.12);
+}
+
+/* make anchors inside list items fill the li for nicer click target */
+ul.interactive li a {
+  display: inline-block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* small helper for touch devices */
+@media (hover: none) {
+  ul.interactive li:hover { transform: none; }
+}
